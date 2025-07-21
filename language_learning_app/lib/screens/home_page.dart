@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'kanji_camera_page.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -45,7 +46,10 @@ class HomePage extends StatelessWidget {
             const SizedBox(height: 16),
             ElevatedButton.icon(
               onPressed: () {
-                // TODO: Navigate to Kanji Camera feature
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const KanjiCameraPage()),
+                );
               },
               icon: const Icon(Icons.camera_alt),
               label: const Text('Kanji Camera'),
